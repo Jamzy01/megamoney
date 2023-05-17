@@ -6,6 +6,7 @@ function PageHeading({ title }) {
     <Heading
       fontSize={{ base: "3xl", sm: "4xl", md: "5xl" }}
       textAlign={{ base: "center", md: "left" }}
+      marginBottom="4"
     >
       {title}
     </Heading>

@@ -8,14 +8,15 @@ function PageSetup({ children }) {
       <Topbar />
       <Box
         paddingX={{
-          base: "var(--chakra-space-8)",
-          sm: "var(--chakra-space-16)",
-          md: "var(--chakra-space-32)",
+          base: "8",
+          sm: "16",
+          md: "32",
+          lg: "64",
         }}
         paddingY={{
-          base: "var(--chakra-space-4)",
-          sm: "var(--chakra-space-8)",
-          md: "var(--chakra-space-16)",
+          base: "4",
+          sm: "8",
+          md: "16",
         }}
         minHeight="100vh"
       >

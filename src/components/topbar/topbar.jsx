@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  IconButton,
   Menu,
   MenuButton,
   MenuItem,
@@ -11,7 +12,7 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import { FiMoreHorizontal, FiDollarSign } from "react-icons/fi";
+import { FiDollarSign, FiMenu } from "react-icons/fi";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const PAGES = [
@@ -27,6 +28,10 @@ const PAGES = [
   {
     location: "/wiseconsumers",
     title: "Wise Consumers",
+  },
+  {
+    location: "/credit",
+    title: "Credit Cards",
   },
   {
     location: "/financialgoals",
@@ -51,9 +56,9 @@ function Topbar() {
     <Box
       display="flex"
       justifyContent="space-between"
-      paddingX="var(--chakra-space-8)"
+      paddingX="4"
       alignItems="center"
-      height="var(--chakra-sizes-16)"
+      height="16"
       bgColor="blackAlpha.200"
     >
       <Text
@@ -61,13 +66,13 @@ function Topbar() {
         userSelect="none"
         display="flex"
         alignItems="center"
-        gap="var(--chakra-space-2)"
+        gap="2"
       >
         <FiDollarSign size="1em" />
         Money Smart
       </Text>
       <Tabs
-        display={{ base: "none", md: "none", lg: "initial" }}
+        display={{ base: "none", md: "none", lg: "none", xl: "initial" }}
         index={PAGES.findIndex(
           (page) =>
             page.location === location.pathname ||
@@ -79,7 +84,7 @@ function Topbar() {
       >
         <TabList>
           {PAGES.map((page) => (
-            <Tab userSelect="none" key={page.location}>
+            <Tab userSelect="none" key={page.location} whiteSpace="nowrap">
               {page.title}
             </Tab>
           ))}
@@ -87,12 +92,11 @@ function Topbar() {
       </Tabs>
       <Menu>
         <MenuButton
-          display={{ base: "initial", md: "initial", lg: "none" }}
-          as={Button}
-          rightIcon={<FiMoreHorizontal />}
-        >
-          Pages
-        </MenuButton>
+          aria-label="page menu"
+          display={{ base: "flex", md: "flex", lg: "flex", xl: "none" }}
+          as={IconButton}
+          icon={<FiMenu />}
+        />
         <MenuList>
           {PAGES.map((page) => (
             <MenuItem
