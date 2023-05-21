@@ -1,0 +1,14 @@
+.informational-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    box-shadow: var(--chakra-shadows-lg);
+    opacity: 0.4;
+    transition: opacity 0.2s;
+}
+
+.informational-card:hover:after {
+    opacity: 0.6;
+}

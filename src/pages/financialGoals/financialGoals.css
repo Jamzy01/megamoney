@@ -1,0 +1,77 @@
+.goal-steps {
+    --steps: 5;
+    --radius: 180px;
+}
+
+.goal-steps :nth-child(1) {
+    --index: 0;
+}
+
+.goal-steps :nth-child(2) {
+    --index: 1;
+}
+
+.goal-steps :nth-child(3) {
+    --index: 2;
+}
+
+.goal-steps :nth-child(4) {
+    --index: 3;
+}
+
+.goal-steps :nth-child(5) {
+    --index: 4;
+}
+
+.goal-steps :nth-child(6) {
+    --index: 5;
+}
+
+.goal-steps :nth-child(7) {
+    --index: 6;
+}
+
+.goal-steps :nth-child(8) {
+    --index: 7;
+}
+
+.goal-steps > * {
+    --pulse-speed: 1;
+    --offset-factor: 0.37;
+    --scale-factor: 0.0.4;
+
+    --radius-pulse-speed: 2;
+    --radius-pulse-factor: 0.02;
+
+    --rotation-factor: 2deg;
+    --rotation-speed: 3.5;
+
+    --movement-speed: 0.02;
+    --movement: calc(var(--time) * var(--movement-speed));
+    
+    --rotation: (var(--index) / var(--steps) - var(--movement));
+    --radius-multiplier: calc(1 + (sin((var(--time) + var(--index)) * var(--radius-pulse-speed)) + 1) * var(--radius-pulse-factor));
+    --translate-x: calc(sin(var(--rotation) * var(--TAU)) * var(--radius) * var(--radius-multiplier));
+    --translate-y: calc(cos(var(--rotation) * var(--TAU)) * var(--radius) * var(--radius-multiplier));
+    translate: calc(var(--translate-x) - 50%) calc(var(--translate-y) - 50%);
+    rotate: calc(var(--rotation-factor) * sin((var(--time) + var(--index)) * var(--rotation-speed)));
+
+    width: var(--chakra-sizes-32);
+    animation-delay: var(--index);
+    scale: calc(1 + calc((sin(var(--time) * var(--pulse-speed) - var(--index) * var(--offset-factor)) + 1) / 2) * var(--scale-factor));
+}
+
+@media screen and (max-width: 600px) {
+    .goal-steps {
+        --radius: 150px;
+    }
+}
+
+.goal-steps-desc > * {
+    margin-bottom: var(--chakra-space-4);
+    transition: opacity 0.5s;
+}
+
+.tip-desc-dim {
+    opacity: 0.5;
+}

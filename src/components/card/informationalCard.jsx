@@ -15,33 +15,33 @@ import {
 } from "@chakra-ui/react";
 import React, { useState } from "react";
 
-function WiseConsumerTip({ title, desc, image }) {
+import "./informationalCard.css";
+
+function InformationalCard({ title, desc, image }) {
   const [open, setOpen] = useState(false);
 
   return (
     <>
       <GridItem
+        userSelect="none"
+        className="informational-card"
         transform={`scale(${open ? 1.1 : 1})`}
         opacity={open ? 0 : 1}
         display="flex"
         gap="4"
         flexDirection="column"
-        bg={useColorModeValue("blackAlpha.100", "blackAlpha.200")}
+        bg={useColorModeValue("white", "blackAlpha.200")}
         borderColor={useColorModeValue("blackAlpha.100", "blackAlpha.300")}
         borderStyle="solid"
         borderWidth="0.1em"
         padding="4"
         borderRadius="md"
-        shadow="md"
         transition="translate 0.4s, box-shadow 0.4s, transform 0.1s ease-in, opacity 0.1s ease-out"
         cursor="pointer"
         _hover={{
-          shadow: "lg",
           translate: "0px calc(var(--chakra-space-1) * -1)",
         }}
         onClick={() => {
-          console.log("Open");
-
           setOpen(true);
         }}
       >
@@ -97,4 +97,4 @@ function WiseConsumerTip({ title, desc, image }) {
   );
 }
 
-export default WiseConsumerTip;
+export default InformationalCard;

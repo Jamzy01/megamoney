@@ -1,0 +1,21 @@
+@property --time {
+    syntax: "<number>";
+    inherits: true;
+    initial-value: 0;
+}
+
+@keyframes time-animation {
+    from {
+        --time: 0;
+    }
+
+    to {
+        --time: 9999999999999999999;
+    }
+}
+
+body {
+    --TAU: 6.28318530718;
+    --time: 0;
+    animation: time-animation infinite 9999999999999999999s linear;
+}

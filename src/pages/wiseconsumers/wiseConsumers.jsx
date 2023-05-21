@@ -13,7 +13,7 @@ import {
   ListItem,
   Text,
 } from "@chakra-ui/react";
-import WiseConsumerTip from "./wiseConsumerTip";
+import InformationalCard from "../../components/card/informationalCard";
 
 import card from "./assets/tips/debitcards/card.jpg";
 import budget from "./assets/tips/budgetting/budget.jpg";
@@ -40,37 +40,37 @@ function WiseConsumers() {
         marginY="8"
         gap="8"
       >
-        <WiseConsumerTip
+        <InformationalCard
           title="Use a debit card"
           image={card}
           desc="Debit cards will help you be conscientious before buying and will stop you from overspending"
         />
-        <WiseConsumerTip
+        <InformationalCard
           title="Write a monthly budget"
           image={budget}
           desc="A monthly budget will help you manage where your monthly earnings are going, and allows you to save money up that could be used in emergency situations"
         />
-        <WiseConsumerTip
+        <InformationalCard
           title="Buy long lasting items on special"
           image={specialitems}
           desc="Buying items that last a long time in large quantities when they're on special can save a lot of money"
         />
-        <WiseConsumerTip
+        <InformationalCard
           title="Cook homemade meals"
           image={homecooking}
           desc="Cooking your own dinner and packing lunch for work or school can save a lot of money and is a healthier alternative"
         />
-        <WiseConsumerTip
+        <InformationalCard
           title="Do your research"
           image={priorresearch}
           desc="Always do your research and check online reviews before buyings items that are expensive or that you expect to have for a long time, aswell as checking return and exchange policies"
         />
-        <WiseConsumerTip
+        <InformationalCard
           title="Don't spend on impulse"
           image={impulseshopping}
           desc="Spending money on impulse is a bad idea as you haven't planned to buy that item, meaning you are likely to deviate from your budget and you also will have done no research on the item being purchased"
         />
-        <WiseConsumerTip
+        <InformationalCard
           title="Try to avoid buying for convenience"
           image={convenienceshopping}
           desc="Whilst being tempting, buying things out of convenince such as takeaway are likely to be much more expensive where better alternatives exist"

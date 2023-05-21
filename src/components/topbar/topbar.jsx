@@ -54,12 +54,16 @@ function Topbar() {
 
   return (
     <Box
+      position="sticky"
+      top={0}
+      zIndex={9999}
       display="flex"
       justifyContent="space-between"
       paddingX="4"
       alignItems="center"
       height="16"
-      bgColor={useColorModeValue("transparent", "blackAlpha.100")}
+      bgColor={useColorModeValue("white", "gray.900")}
+      shadow="sm"
     >
       <Text
         fontSize="xl"
