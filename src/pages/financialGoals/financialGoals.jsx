@@ -1,14 +1,13 @@
-import { Heading, Text } from "@chakra-ui/react";
 import React from "react";
 import PageSetup from "../../components/page/pageSetup";
 import PageHeading from "../../components/pageHeading/pageHeading";
 
-function Home() {
+function FinancialGoals() {
   return (
     <PageSetup>
-      <PageHeading>Be in the know with money</PageHeading>
+      <PageHeading>Financial Goals</PageHeading>
     </PageSetup>
   );
 }
 
-export default Home;
+export default FinancialGoals;

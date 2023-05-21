@@ -10,36 +10,20 @@ import InformationalText from "../../components/text/informationalText";
 function Scams() {
   return (
     <PageSetup>
-      <PageHeading title="Watch out for scams" />
+      <PageHeading>Watch out for scams</PageHeading>
       <ResponsiveBodyText>
         Scams are easy to fall for, especially on the web, luckily when you know
         what to look for, scams can be hilariously obvious
       </ResponsiveBodyText>
       <ResponsiveBodyText marginY="8">
         This email below is an example of a scam, click on the highlighted text
-        to explain why this email is obviously malicious
+        to explain why this email is clearly malicious
       </ResponsiveBodyText>
-      <Box
-        height="300px"
-        padding="6"
-        bg="whiteAlpha.200"
-        borderRadius="md"
-        shadow="md"
-      >
-        <Grid
-          templateRows="var(--chakra-space-8) 1fr 2fr"
-          templateColumns="var(--chakra-space-16) 1fr"
-          gap="4"
-          height="100%"
-        >
-          <GridItem colStart={2}>
-            <Text fontSize="xl">
-              Your Microsoft Account Needs Attention URGENTLY
-            </Text>
-          </GridItem>
-          <GridItem>
+      <Box padding="6" bg="whiteAlpha.200" borderRadius="md" shadow="md">
+        <Box display="flex" gap="4" flexDirection="column">
+          <Box display="flex" gap="4" alignItems="center">
             <Box
-              height="100%"
+              height="50px"
               aspectRatio={1}
               backgroundColor="white"
               shadow="md"
@@ -49,12 +33,22 @@ function Scams() {
               bgPosition="center"
               borderRadius="9999px"
             />
-          </GridItem>
-          <GridItem
-            display="flex"
-            flexDirection="column"
-            justifyContent="space-between"
-          >
+            <Text
+              fontSize={{
+                base: "md",
+                md: "lg",
+              }}
+            >
+              Your Microsoft Account Needs Attention ​
+              <InformationalText
+                title="Angry Tone In Email"
+                desc="Many scam emails will come with an angry or urgent tone, legitimate businesses would never send you an email like this"
+              >
+                URGENTLY
+              </InformationalText>
+            </Text>
+          </Box>
+          <Box>
             <Text fontSize="lg">Microsoft Account Team</Text>
             <Text display="flex">
               microsoftsupport@
@@ -65,11 +59,33 @@ function Scams() {
                 gmail.com
               </InformationalText>
             </Text>
-          </GridItem>
-          <GridItem colStart={2}>
+          </Box>
+          <Divider />
+          <Box>
             <Text fontWeight="semibold">Dear Valued Customer</Text>
-          </GridItem>
-        </Grid>
+            <Text>
+              Your{" "}
+              <InformationalText
+                title="Spelling and gramatical errors"
+                desc="It is incredbly unlikely for a legitimate email to include obvious spelling and gramatical errors such as this one"
+              >
+                acount's
+              </InformationalText>{" "}
+              password has expired, please go to this link IMMEDIATELY to reset
+              your password. If you do not reset your password, then you are at
+              a high risk of being hacked.
+            </Text>
+            <Text>
+              If you change your password within 3 days,{" "}
+              <InformationalText
+                title="Too good to be true offers"
+                desc="Any unreasonable claims that seem too good to be true suggest that the email is most likely a scam"
+              >
+                you will get a bonus $100
+              </InformationalText>
+            </Text>
+          </Box>
+        </Box>
       </Box>
     </PageSetup>
   );

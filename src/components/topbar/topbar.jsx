@@ -10,9 +10,11 @@ import {
   TabList,
   Tabs,
   Text,
+  useColorMode,
+  useColorModeValue,
 } from "@chakra-ui/react";
-import React from "react";
-import { FiDollarSign, FiMenu } from "react-icons/fi";
+import React, { useRef } from "react";
+import { FiDollarSign, FiMenu, FiMoon, FiSun } from "react-icons/fi";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const PAGES = [
@@ -28,10 +30,6 @@ const PAGES = [
   {
     location: "/wiseconsumers",
     title: "Wise Consumers",
-  },
-  {
-    location: "/credit",
-    title: "Credit Cards",
   },
   {
     location: "/financialgoals",
@@ -52,6 +50,8 @@ function Topbar() {
 
   const navigate = useNavigate();
 
+  const { toggleColorMode } = useColorMode();
+
   return (
     <Box
       display="flex"
@@ -59,7 +59,7 @@ function Topbar() {
       paddingX="4"
       alignItems="center"
       height="16"
-      bgColor="blackAlpha.200"
+      bgColor={useColorModeValue("transparent", "blackAlpha.100")}
     >
       <Text
         fontSize="xl"
@@ -69,48 +69,62 @@ function Topbar() {
         gap="2"
       >
         <FiDollarSign size="1em" />
-        Money Smart
+        Mega Money
       </Text>
-      <Tabs
-        display={{ base: "none", md: "none", lg: "none", xl: "initial" }}
-        index={PAGES.findIndex(
-          (page) =>
-            page.location === location.pathname ||
-            (page.default && location.pathname === "/")
-        )}
-        onChange={(index) => {
-          navigate(PAGES[index].location);
-        }}
-      >
-        <TabList>
-          {PAGES.map((page) => (
-            <Tab userSelect="none" key={page.location} whiteSpace="nowrap">
-              {page.title}
-            </Tab>
-          ))}
-        </TabList>
-      </Tabs>
-      <Menu>
-        <MenuButton
-          aria-label="page menu"
-          display={{ base: "flex", md: "flex", lg: "flex", xl: "none" }}
-          as={IconButton}
-          icon={<FiMenu />}
+      <Box display="flex" gap="4">
+        <IconButton
+          icon={useColorModeValue(<FiSun />, <FiMoon />)}
+          aria-label={useColorModeValue(
+            "toggle to dark theme",
+            "toggle to light theme"
+          )}
+          onClick={toggleColorMode}
         />
-        <MenuList>
-          {PAGES.map((page) => (
-            <MenuItem
-              key={page.location}
-              onClick={() => {
-                navigate(page.location);
-              }}
-              active={true}
-            >
-              {page.title}
-            </MenuItem>
-          ))}
-        </MenuList>
-      </Menu>
+
+        <Tabs
+          display={{ base: "none", md: "none", lg: "none", xl: "initial" }}
+          index={PAGES.findIndex(
+            (page) =>
+              page.location === location.pathname ||
+              (page.default && location.pathname === "/")
+          )}
+        >
+          <TabList>
+            {PAGES.map((page) => (
+              <Tab
+                userSelect="none"
+                key={page.location}
+                whiteSpace="nowrap"
+                onClick={() => {
+                  navigate(page.location);
+                }}
+              >
+                {page.title}
+              </Tab>
+            ))}
+          </TabList>
+        </Tabs>
+        <Menu>
+          <MenuButton
+            aria-label="page menu"
+            display={{ base: "flex", md: "flex", lg: "flex", xl: "none" }}
+            as={IconButton}
+            icon={<FiMenu />}
+          />
+          <MenuList>
+            {PAGES.map((page) => (
+              <MenuItem
+                key={page.location}
+                onClick={() => {
+                  navigate(page.location);
+                }}
+              >
+                {page.title}
+              </MenuItem>
+            ))}
+          </MenuList>
+        </Menu>
+      </Box>
     </Box>
   );
 }

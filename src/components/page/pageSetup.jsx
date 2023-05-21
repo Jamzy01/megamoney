@@ -8,10 +8,11 @@ function PageSetup({ children }) {
       <Topbar />
       <Box
         paddingX={{
-          base: "8",
-          sm: "16",
-          md: "32",
-          lg: "64",
+          base: "4",
+          sm: "8",
+          md: "16",
+          lg: "32",
+          "2xl": 64,
         }}
         paddingY={{
           base: "4",
