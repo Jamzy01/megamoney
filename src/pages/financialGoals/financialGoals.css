@@ -61,12 +61,6 @@
     scale: calc(1 + calc((sin(var(--time) * var(--pulse-speed) - var(--index) * var(--offset-factor)) + 1) / 2) * var(--scale-factor));
 }
 
-@media screen and (max-width: 600px) {
-    .goal-steps {
-        --radius: 150px;
-    }
-}
-
 .goal-steps-desc > * {
     margin-bottom: var(--chakra-space-4);
     transition: opacity 0.5s;
@@ -75,3 +69,30 @@
 .tip-desc-dim {
     opacity: 0.5;
 }
+
+.budget-steps * {
+    font-weight: initial;
+    text-align: inherit;
+}
+
+.budget-steps > * {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 48em) {
+    .budget-steps > :nth-child(odd) {
+        text-align: left;
+    }
+    
+    .budget-steps > :nth-child(even) {
+        text-align: right;
+        align-items: end;
+    }
+
+    .budget-steps > * p {
+        width: 60%;
+        max-width: 30em;
+    }
+}
+

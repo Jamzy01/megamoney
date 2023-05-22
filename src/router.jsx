@@ -4,9 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/home/home";
 import Scams from "./pages/scams/scams";
 import WiseConsumers from "./pages/wiseconsumers/wiseConsumers";
-import JobTips from "./pages/jobtips/jobTips";
+import JobTips from "./pages/jobTips/jobTips";
 import FinancialGoals from "./pages/financialGoals/financialGoals";
-import DecisionMaking from "./pages/decisionmaking/decisionmaking";
+import DecisionMaking from "./pages/decisionMaking/decisionMaking";
 
 const router = createBrowserRouter([
   {
