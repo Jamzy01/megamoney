@@ -10,31 +10,31 @@ import DecisionMaking from "./pages/decisionMaking/decisionMaking";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/megamoney",
     element: <Home />,
   },
   {
-    path: "/home",
+    path: "/megamoney/home",
     element: <Home />,
   },
   {
-    path: "/scams",
+    path: "/megamoney/scams",
     element: <Scams />,
   },
   {
-    path: "/wiseconsumers",
+    path: "/megamoney/wiseconsumers",
     element: <WiseConsumers />,
   },
   {
-    path: "/financialgoals",
+    path: "/megamoney/financialgoals",
     element: <FinancialGoals />,
   },
   {
-    path: "/decisionmaking",
+    path: "/megamoney/decisionmaking",
     element: <DecisionMaking />,
   },
   {
-    path: "/jobtips",
+    path: "/megamoney/jobtips",
     element: <JobTips />,
   },
 ]);

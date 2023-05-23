@@ -20,27 +20,27 @@ import { useLocation, useNavigate } from "react-router-dom";
 const PAGES = [
   {
     default: true,
-    location: "/home",
+    location: "/megamoney/home",
     title: "Home",
   },
   {
-    location: "/scams",
+    location: "/megamoney/scams",
     title: "Scams",
   },
   {
-    location: "/wiseconsumers",
+    location: "/megamoney/wiseconsumers",
     title: "Wise Consumers",
   },
   {
-    location: "/financialgoals",
+    location: "/megamoney/financialgoals",
     title: "Financial Goals",
   },
   {
-    location: "/decisionmaking",
+    location: "/megamoney/decisionmaking",
     title: "Decision Making",
   },
   {
-    location: "/jobtips",
+    location: "/megamoney/jobtips",
     title: "Job Tips",
   },
 ];
