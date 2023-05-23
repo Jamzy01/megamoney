@@ -3,8 +3,8 @@ import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/megamoney",
   plugins: [react()],
+  base: "/megamoney",
   server: {
     watch: {
       usePolling: true,

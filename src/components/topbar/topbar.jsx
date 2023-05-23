@@ -17,6 +17,8 @@ import React, { useRef } from "react";
 import { FiDollarSign, FiMenu, FiMoon, FiSun } from "react-icons/fi";
 import { useLocation, useNavigate } from "react-router-dom";
 
+const rootPath = "/megamoney";
+
 const PAGES = [
   {
     default: true,
@@ -90,7 +92,7 @@ function Topbar() {
           index={PAGES.findIndex(
             (page) =>
               page.location === location.pathname ||
-              (page.default && location.pathname === "/")
+              (page.default && location.pathname === rootPath)
           )}
         >
           <TabList>

@@ -10,6 +10,10 @@ import DecisionMaking from "./pages/decisionMaking/decisionMaking";
 
 const router = createBrowserRouter([
   {
+    path: "/",
+    element: <Home />,
+  },
+  {
     path: "/megamoney",
     element: <Home />,
   },
