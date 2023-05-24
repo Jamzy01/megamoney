@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "@chakra-ui/react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/home/home";
 import Scams from "./pages/scams/scams";
 import WiseConsumers from "./pages/wiseconsumers/wiseConsumers";
@@ -8,7 +8,7 @@ import JobTips from "./pages/jobTips/jobTips";
 import FinancialGoals from "./pages/financialGoals/financialGoals";
 import DecisionMaking from "./pages/decisionMaking/decisionMaking";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Home />,
@@ -18,27 +18,27 @@ const router = createBrowserRouter([
     element: <Home />,
   },
   {
-    path: "/megamoney/home",
+    path: "/home",
     element: <Home />,
   },
   {
-    path: "/megamoney/scams",
+    path: "/scams",
     element: <Scams />,
   },
   {
-    path: "/megamoney/wiseconsumers",
+    path: "/wiseconsumers",
     element: <WiseConsumers />,
   },
   {
-    path: "/megamoney/financialgoals",
+    path: "/financialgoals",
     element: <FinancialGoals />,
   },
   {
-    path: "/megamoney/decisionmaking",
+    path: "/decisionmaking",
     element: <DecisionMaking />,
   },
   {
-    path: "/megamoney/jobtips",
+    path: "/jobtips",
     element: <JobTips />,
   },
 ]);

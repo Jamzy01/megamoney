@@ -17,32 +17,32 @@ import React, { useRef } from "react";
 import { FiDollarSign, FiMenu, FiMoon, FiSun } from "react-icons/fi";
 import { useLocation, useNavigate } from "react-router-dom";
 
-const rootPath = "/megamoney";
+const rootPath = "/";
 
 const PAGES = [
   {
     default: true,
-    location: "/megamoney/home",
+    location: "/home",
     title: "Home",
   },
   {
-    location: "/megamoney/scams",
+    location: "/scams",
     title: "Scams",
   },
   {
-    location: "/megamoney/wiseconsumers",
+    location: "/wiseconsumers",
     title: "Wise Consumers",
   },
   {
-    location: "/megamoney/financialgoals",
+    location: "/financialgoals",
     title: "Financial Goals",
   },
   {
-    location: "/megamoney/decisionmaking",
+    location: "/decisionmaking",
     title: "Decision Making",
   },
   {
-    location: "/megamoney/jobtips",
+    location: "/jobtips",
     title: "Job Tips",
   },
 ];

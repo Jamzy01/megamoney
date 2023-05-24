@@ -38,7 +38,7 @@
 .goal-steps > * {
     --pulse-speed: 1;
     --offset-factor: 0.37;
-    --scale-factor: 0.0.4;
+    --scale-factor: 0.04;
 
     --radius-pulse-speed: 2;
     --radius-pulse-factor: 0.02;
