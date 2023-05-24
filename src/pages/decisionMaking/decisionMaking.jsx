@@ -5,46 +5,72 @@ import PageSubHeading from "../../components/pageHeading/pageSubHeading";
 import ResponsiveBodyText from "../../components/text/responsiveBodyText";
 import { Box, Circle, Grid, GridItem, Text } from "@chakra-ui/react";
 
-function DecisionMakingStep({ number, title, below }) {
+function DecisionMakingStep({ number, title, below, ...rest }) {
   return (
-    <GridItem
-      position="relative"
-      display="flex"
-      flexDirection={{
-        base: "row-reverse",
-        sm: "row-reverse",
-        xl: below ? "column-reverse" : "column",
-      }}
-      justifyContent={{ base: "start", sm: "start", xl: "space-between" }}
-      alignItems="center"
-      paddingBottom={{ base: 0, sm: 0, xl: below ? 0 : "12" }}
-      paddingTop={{ base: 0, sm: 0, xl: below ? "12" : 0 }}
-      paddingRight={{ base: "8", sm: "8", xl: 0 }}
-      gap="8"
-    >
-      <Text
-        bottom={0}
-        left={0}
-        right={0}
-        fontSize="xl"
-        textAlign="center"
-        display="flex"
+    <>
+      <GridItem
+        position="relative"
+        display={{ base: "none", sm: "none", xl: "flex" }}
+        flexDirection={below ? "column-reverse" : "column"}
+        justifyContent="space-between"
+        alignItems="center"
+        paddingBottom={below ? 0 : "12"}
+        paddingTop={below ? "12" : 0}
+        gap="8"
+        {...rest}
       >
-        {title}
-      </Text>
-      <Circle
-        size="16"
-        bg="green.100"
-        borderStyle="solid"
-        borderColor="green.200"
-        borderWidth="2px"
-        shadow="2xl"
-      >
-        <Text fontSize="3xl" fontWeight="light">
-          {number}
+        <Text
+          bottom={0}
+          left={0}
+          right={0}
+          fontSize="xl"
+          textAlign="center"
+          display="flex"
+        >
+          {title}
         </Text>
-      </Circle>
-    </GridItem>
+        <Circle
+          size="16"
+          bg="green.100"
+          borderStyle="solid"
+          borderColor="green.200"
+          borderWidth="2px"
+          shadow="2xl"
+        >
+          <Text fontSize="3xl" fontWeight="light">
+            {number}
+          </Text>
+        </Circle>
+      </GridItem>
+      <Box
+        display={{ base: "flex", sm: "flex", xl: "none" }}
+        alignItems="center"
+        gap="4"
+      >
+        <Circle
+          size="16"
+          bg="green.700"
+          borderStyle="solid"
+          borderColor="green.200"
+          borderWidth="2px"
+          shadow="2xl"
+        >
+          <Text fontSize="3xl" fontWeight="light">
+            {number}
+          </Text>
+        </Circle>
+        <Text
+          bottom={0}
+          left={0}
+          right={0}
+          fontSize="xl"
+          textAlign="center"
+          display="flex"
+        >
+          {title}
+        </Text>
+      </Box>
+    </>
   );
 }
 
@@ -58,7 +84,7 @@ function DecisionMaking() {
       </ResponsiveBodyText>
       <Box marginTop="8" position="relative" display="flex" alignItems="center">
         <Box
-          display={{ base: "none", sm: "none", md: "initial" }}
+          display={{ base: "none", sm: "none", xl: "initial" }}
           position="absolute"
           top={{ base: 0, sm: 0, xl: "50%" }}
           right={{ base: 0, sm: 0, xl: "" }}
@@ -71,32 +97,41 @@ function DecisionMaking() {
         />
         <Grid
           gap="4"
-          templateColumns={{ base: "", sm: "", xl: "repeat(4, 1fr)" }}
+          templateColumns={{ base: "", sm: "", xl: "repeat(5, 1fr)" }}
           templateRows={{ base: "", sm: "", xl: "repeat(2, 1fr)" }}
           padding={{ base: "4", sm: "4", md: 0 }}
         >
           <DecisionMakingStep
+            colStart={1}
+            rowStart={1}
             number="1"
             title="Identify the problem and it's priority"
           />
-          <DecisionMakingStep number="2" title="Avoid panicking" />
-          <DecisionMakingStep number="3" title="Do your research" />
-          <DecisionMakingStep number="4" title="Talk to an advisor" />
           <DecisionMakingStep
+            colStart={2}
+            rowStart={2}
+            number="2"
             below={true}
-            number="1"
-            title="Identify the problem and it's priority"
-          />
-          <DecisionMakingStep below={true} number="2" title="Avoid panicking" />
-          <DecisionMakingStep
-            below={true}
-            number="3"
             title="Do your research"
           />
           <DecisionMakingStep
+            colStart={3}
+            rowStart={1}
+            number="3"
+            title="Consider alternatives"
+          />
+          <DecisionMakingStep
+            colStart={4}
+            rowStart={2}
             below={true}
             number="4"
-            title="Talk to an advisor"
+            title="Evalutate pros and cons"
+          />
+          <DecisionMakingStep
+            colStart={5}
+            rowStart={1}
+            number="5"
+            title="Discuss your decision with an advisor"
           />
         </Grid>
       </Box>

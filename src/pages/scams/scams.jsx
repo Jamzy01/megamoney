@@ -19,8 +19,21 @@ function Scams() {
         This email below is an example of a scam, click on the highlighted text
         to explain why this email is clearly malicious
       </ResponsiveBodyText>
-      <Box padding="6" bg="whiteAlpha.200" borderRadius="md" shadow="md">
-        <Box display="flex" gap="4" flexDirection="column">
+      <Box
+        display="flex"
+        justifyContent="center"
+        marginTop={{ base: 0, sm: 0, md: "4em" }}
+      >
+        <Box
+          maxWidth="5xl"
+          display="flex"
+          gap="4"
+          flexDirection="column"
+          padding="6"
+          bg="whiteAlpha.200"
+          borderRadius="md"
+          shadow="md"
+        >
           <Box display="flex" gap="4" alignItems="center">
             <Box
               height="50px"

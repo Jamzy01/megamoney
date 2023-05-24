@@ -3,7 +3,11 @@ import React from "react";
 
 function ResponsiveBodyText({ children, ...rest }) {
   return (
-    <Text fontSize="xl" textAlign={{ sm: "center", md: "left" }} {...rest}>
+    <Text
+      fontSize={{ base: "md", sm: "md", md: "lg", lg: "xl" }}
+      textAlign={{ sm: "center", md: "left" }}
+      {...rest}
+    >
       {children}
     </Text>
   );
