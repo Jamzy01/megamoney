@@ -64,7 +64,7 @@ function Topbar() {
       paddingX="4"
       alignItems="center"
       height="16"
-      bgColor={useColorModeValue("white", "gray.900")}
+      bgColor={useColorModeValue("white", "gray.800")}
       shadow="sm"
     >
       <Text
@@ -88,6 +88,9 @@ function Topbar() {
         />
 
         <Tabs
+          bg={useColorModeValue("white", "gray.800")}
+          borderRadius="md"
+          overflow="clip"
           display={{ base: "none", md: "none", lg: "none", xl: "initial" }}
           index={PAGES.findIndex(
             (page) =>

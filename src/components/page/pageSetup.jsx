@@ -2,9 +2,9 @@ import { Box } from "@chakra-ui/react";
 import React from "react";
 import Topbar from "../topbar/topbar";
 
-function PageSetup({ children }) {
+function PageSetup({ children, ...rest }) {
   return (
-    <Box>
+    <Box {...rest}>
       <Topbar />
       <Box
         paddingX={{

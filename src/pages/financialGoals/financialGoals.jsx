@@ -8,6 +8,7 @@ import {
   ListItem,
   OrderedList,
   Text,
+  UnorderedList,
   VStack,
   useColorModeValue,
 } from "@chakra-ui/react";
@@ -93,8 +94,8 @@ function FinancialGoals() {
   return (
     <PageSetup>
       <PageHeading>Financial Goals</PageHeading>
-      <PageSubHeading>
-        What should your financial goals look like?{" "}
+      <PageSubHeading marginBottom="8">
+        What should your financial goals look like?
       </PageSubHeading>
       <Box
         display="flex"
@@ -201,7 +202,9 @@ function FinancialGoals() {
           </OrderedList>
         </Box>
       </Box>
-      <PageSubHeading marginTop="4">Making a budget</PageSubHeading>
+      <PageSubHeading marginTop="4" marginBottom="8">
+        Making a budget
+      </PageSubHeading>
       <Box
         fontSize="3xl"
         className="budget-steps"
@@ -228,6 +231,20 @@ function FinancialGoals() {
           </Text>
         </Heading>
         <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
+          4. Allocate the money
+          <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
+            Allocate your income to these area of expenses, allocating them in
+            order of neccesity
+            <UnorderedList marginY="2">
+              <ListItem>Fixed Expenses</ListItem>
+              <ListItem>Debt Expenses</ListItem>
+              <ListItem>Unexpected Expenses</ListItem>
+            </UnorderedList>
+            This should give you a fair idea of how much money you spend, and
+            what your allowance should be for other spending
+          </Text>
+        </Heading>
+        <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
           3. What's left over
           <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
             If there is money left over (which there should be), then you can
@@ -235,10 +252,16 @@ function FinancialGoals() {
             should be used for entertainment, shopping, eating out and leisure.
             Saving money should be used for investments, emergency money,
             retirement, debt repayments or other savings.
+            <Text fontWeight="bold" as="span">
+              {" "}
+              Be sure to stick to your budget, and make sure you aren't spending
+              past your income
+            </Text>
           </Text>
         </Heading>
+
         <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
-          4. Adjust the budget
+          5. Adjust the budget
           <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
             If something isn't working out great in your budget, adjust it
             accordingly. Your budget is never final and is only a guide for your

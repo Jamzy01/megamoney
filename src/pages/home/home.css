@@ -1,0 +1,5 @@
+.home-bg {
+    --mask-image: linear-gradient(rgba(0, 0, 0, 1), transparent);
+    mask-image: var(--mask-image);
+    -webkit-mask-image: var(--mask-image);
+}
