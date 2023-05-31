@@ -1,3 +1,7 @@
+.informational-card {
+    -webkit-tap-highlight-color: transparent;
+}
+
 .informational-card::after {
     content: "";
     position: absolute;

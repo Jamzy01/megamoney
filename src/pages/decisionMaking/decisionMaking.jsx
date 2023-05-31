@@ -42,7 +42,7 @@ function DecisionMakingStep({ number, title, below, ...rest }) {
           borderStyle="solid"
           borderColor={useColorModeValue("blue.100", "blue.800")}
           borderWidth="2px"
-          shadow="2xl"
+          shadow="sm"
         >
           <Text fontSize="3xl" fontWeight="light">
             {number}
@@ -69,7 +69,7 @@ function DecisionMakingStep({ number, title, below, ...rest }) {
           borderStyle="solid"
           borderColor={useColorModeValue("blue.100", "blue.800")}
           borderWidth="2px"
-          shadow="2xl"
+          shadow="sm"
         >
           <Text fontSize="2xl" fontWeight="light">
             {number}
@@ -95,7 +95,7 @@ function DecisionMakingStepDesc({ title, desc }) {
     <GridItem
       bg={useColorModeValue("white", "blackAlpha.200")}
       borderRadius="md"
-      shadow={{ base: "sm", sm: "sm", lg: "md" }}
+      shadow={{ base: "md", sm: "md", lg: "md" }}
       padding="6"
       display="flex"
       flexDirection="column"
@@ -129,7 +129,7 @@ function DecisionMaking() {
         position="relative"
         display="flex"
         alignItems="center"
-        paddingX="4"
+        paddingX={{ base: 0, sm: 0, xl: "4" }}
       >
         <Box
           display={{ base: "none", sm: "none", xl: "initial" }}
@@ -147,7 +147,6 @@ function DecisionMaking() {
           gap="4"
           templateColumns={{ base: "", sm: "", xl: "repeat(6, 1fr)" }}
           templateRows={{ base: "", sm: "", xl: "repeat(2, 1fr)" }}
-          padding={{ base: "4", sm: "4", md: 0 }}
         >
           <DecisionMakingStep
             colStart={1}
@@ -193,7 +192,12 @@ function DecisionMaking() {
       <Grid
         marginTop="16"
         gap="8"
-        templateColumns={{ base: "1fr", sm: "1fr", lg: "repeat(3, 1fr)" }}
+        templateColumns={{
+          base: "1fr",
+          sm: "1fr",
+          md: "repeat(2, 1fr)",
+          xl: "repeat(3, 1fr)",
+        }}
       >
         <DecisionMakingStepDesc
           title="Identify the problem"

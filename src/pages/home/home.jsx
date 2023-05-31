@@ -20,6 +20,8 @@ function Home() {
   return (
     <PageSetup position="relative">
       <Image
+        opacity={useColorModeValue(0.7, 1)}
+        width="100%"
         className="home-bg"
         position="absolute"
         src={moneypot}
@@ -32,33 +34,42 @@ function Home() {
       <Box
         right={0}
         display="flex"
-        alignItems="flex-end"
+        alignItems={{ base: "center", sm: "center", xl: "flex-end" }}
         flexDirection="column"
       >
-        <PageHeading textAlign="right">Be in the know with money</PageHeading>
-        <PageSubHeading textAlign="right" fontWeight="400" maxWidth="50%">
+        <PageHeading textAlign={{ base: "center", sm: "center", xl: "right" }}>
+          Be in the know with money
+        </PageHeading>
+        <PageSubHeading
+          textAlign={{ base: "center", sm: "center", xl: "right" }}
+          fontWeight="400"
+          maxWidth={{ base: null, sm: null, md: "70%", xl: "50%" }}
+        >
           Stop yourself from letting money fall out of your pockets unknowingly
         </PageSubHeading>
       </Box>
       <Box
-        marginTop="64"
+        marginTop={{ base: "8", sm: "8", md: "16", xl: "64" }}
         bg="blackAlpha.50"
         shadow="sm"
-        backdropFilter="blur(12px)"
-        borderColor="gray.800"
+        backdropFilter={`blur(8px) contrast(20%) brightness(${useColorModeValue(
+          167,
+          30
+        )}%)`}
+        borderColor={useColorModeValue("whiteAlpha.300", "gray.900")}
         borderStyle="solid"
         borderWidth="2px"
         borderRadius="md"
         padding="8"
         display="flex"
-        flexDirection="row"
+        flexDirection={{ base: "column", sm: "column", md: "row" }}
         gap="8"
       >
         <Box
           display="flex"
           flexDirection="column"
           justifyContent="space-between"
-          alignItems="start"
+          alignItems={{ base: "center", sm: "center", md: "flex-start" }}
         >
           <Box>
             <PageSubHeading>Watch out for scams</PageSubHeading>
@@ -74,9 +85,11 @@ function Home() {
           <Button>Read more</Button>
         </Box>
         <Image
-          width="50%"
-          height="48"
+          aspectRatio={{ base: 16 / 9, sm: 16 / 9, md: 6 / 5 }}
+          flex={1}
+          height="64"
           borderRadius="md"
+          shadow="md"
           objectFit="cover"
           src={computerpadlock}
         />

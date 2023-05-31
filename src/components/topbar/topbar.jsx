@@ -58,13 +58,16 @@ function Topbar() {
     <Box
       position="sticky"
       top={0}
-      zIndex={9999}
+      zIndex={1000}
       display="flex"
       justifyContent="space-between"
       paddingX="4"
       alignItems="center"
       height="16"
-      bgColor={useColorModeValue("white", "gray.800")}
+      bg={useColorModeValue(
+        "white",
+        "linear-gradient(0deg, var(--chakra-colors-gray-800), var(--chakra-colors-gray-900))"
+      )}
       shadow="sm"
     >
       <Text
