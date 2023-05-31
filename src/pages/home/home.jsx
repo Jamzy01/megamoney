@@ -26,7 +26,7 @@ function Home() {
         position="absolute"
         src={moneypot}
         zIndex={-1}
-        filter="brightness(100%)"
+        filter={`brightness(${useColorModeValue(100, 75)}%)`}
         left={0}
         right={0}
         top={0}
