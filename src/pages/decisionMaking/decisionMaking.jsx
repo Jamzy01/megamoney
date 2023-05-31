@@ -144,6 +144,7 @@ function DecisionMaking() {
           borderRadius="full"
         />
         <Grid
+          width="100%"
           gap="4"
           templateColumns={{ base: "", sm: "", xl: "repeat(6, 1fr)" }}
           templateRows={{ base: "", sm: "", xl: "repeat(2, 1fr)" }}
@@ -152,7 +153,7 @@ function DecisionMaking() {
             colStart={1}
             rowStart={1}
             number="1"
-            title="Identify the problem and it's priority"
+            title="Identify the problem"
           />
           <DecisionMakingStep
             colStart={2}
@@ -178,7 +179,7 @@ function DecisionMaking() {
             colStart={5}
             rowStart={1}
             number="5"
-            title="Discuss your decision with an advisor"
+            title="Talk to an advisor"
           />
           <DecisionMakingStep
             colStart={6}
