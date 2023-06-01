@@ -5,6 +5,7 @@ import PageSubHeading from "../../components/pageHeading/pageSubHeading";
 import {
   Box,
   HStack,
+  Image,
   OrderedList,
   Text,
   UnorderedList,
@@ -12,9 +13,14 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 
-function SubTip({ title, desc }) {
+import "./jobTips.css";
+
+import selfExamine from "./assets/infoBackgrounds/jobChoosing/selfExamine.jpg";
+
+function SubTip({ title, desc, bgImage }) {
   return (
     <Box
+      className="sub-tip"
       display="flex"
       flexDirection="column"
       gap="4"
@@ -22,11 +28,30 @@ function SubTip({ title, desc }) {
       justifyContent="center"
       alignItems="center"
       padding="8"
-      bg="blackAlpha.50"
       shadow="md"
-      borderRadius="md"
       textAlign="center"
+      position="relative"
+      overflow="clip"
+      borderRadius="md"
+      borderStyle="solid"
+      borderColor="blackAlpha.50"
+      borderWidth="1px"
     >
+      <Image
+        position="absolute"
+        src={bgImage}
+        zIndex={-1}
+        width="100%"
+        height="100%"
+        objectFit="cover"
+        filter={useColorModeValue(
+          "brightness(130%) blur(2px)",
+          "contrast(75%) brightness(55%) blur(2px)"
+        )}
+        transform="scale(1.04)"
+        transition="transform 1s ease-out"
+        opacity={useColorModeValue(0.25, 1)}
+      />
       <Text
         maxWidth="80%"
         fontWeight="500"
@@ -51,14 +76,23 @@ function JobTips() {
         >
           1. Choose Your Job
         </PageSubHeading>
-        <Box display="flex" gap="4">
+        <Box
+          display="flex"
+          flexDirection={{ base: "column", sm: "column", xl: "row" }}
+          gap="4"
+        >
           <SubTip
             title="Consider your interests, strengths and weaknesses"
             desc="Think to yourself, what do I like doing, what am I good at?
             Think about your strengths and weaknesses, and base your job search around that and you will
             find yourself with doing work that is easy and/or enjoyable"
+            bgImage={selfExamine}
           />
-          <SubTip title="Test" />
+          <SubTip
+            title="Analyse your long term goals"
+            desc="Do you have long term plan in mind? If so, how will this job help you get there.
+            If you want to see yourself"
+          />
           <SubTip title="Test" />
         </Box>
         <PageSubHeading
