@@ -15,6 +15,7 @@ import computerpadlock from "./assets/topics/scams/computerpadlock.jpg";
 import "./home.css";
 import PageSubHeading from "../../components/pageHeading/pageSubHeading";
 import ResponsiveBodyText from "../../components/text/responsiveBodyText";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -82,7 +83,9 @@ function Home() {
               which is why it is crucial that you know how to recognise a scam
             </ResponsiveBodyText>
           </Box>
-          <Button>Read more</Button>
+          <Link to="/wiseconsumers">
+            <Button>Read more</Button>
+          </Link>
         </Box>
         <Image
           aspectRatio={{ base: 16 / 9, sm: 16 / 9, md: 6 / 5 }}
@@ -94,6 +97,7 @@ function Home() {
           src={computerpadlock}
         />
       </Box>
+      <Box bg="blackAlpha.50" marginTop="8" height="48" borderRadius="md"></Box>
     </PageSetup>
   );
 }
