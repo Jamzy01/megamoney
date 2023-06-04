@@ -1,6 +1,7 @@
 import { Box } from "@chakra-ui/react";
 import React from "react";
 import Topbar from "../topbar/topbar";
+import Footer from "../footer/footer";
 
 function PageSetup({ children, ...rest }) {
   return (
@@ -23,6 +24,7 @@ function PageSetup({ children, ...rest }) {
       >
         {children}
       </Box>
+      <Footer />
     </Box>
   );
 }

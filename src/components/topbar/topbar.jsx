@@ -65,7 +65,7 @@ function Topbar() {
       alignItems="center"
       height="16"
       bg={useColorModeValue(
-        "white",
+        "gray.50",
         "linear-gradient(0deg, var(--chakra-colors-gray-800), var(--chakra-colors-gray-900))"
       )}
       shadow="sm"

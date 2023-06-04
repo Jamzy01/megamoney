@@ -40,12 +40,9 @@ function SubTip({ title, desc, bgImage }) {
       justifyContent="center"
       alignItems="center"
       padding="8"
-      shadow="md"
+      shadow="sm"
       textAlign="center"
       position="relative"
-      borderStyle="solid"
-      borderColor={useColorModeValue("transparent", "blackAlpha.400")}
-      borderWidth="1px"
       borderRadius="md"
       overflow="clip"
     >
@@ -57,10 +54,10 @@ function SubTip({ title, desc, bgImage }) {
         height="100%"
         objectFit="cover"
         filter={useColorModeValue(
-          "brightness(115%) blur(2px)",
+          "brightness(130%) blur(5px)",
           "contrast(75%) brightness(55%) blur(2px)"
         )}
-        opacity={useColorModeValue(0.2, 1)}
+        opacity={useColorModeValue(0.3, 1)}
       />
       <Text
         maxWidth="80%"
@@ -80,7 +77,7 @@ function JobTips() {
       <PageHeading>Job Tips</PageHeading>
       <Box marginTop="16" display="flex" flexDirection="column" gap="4">
         <PageSubHeading
-          bg={useColorModeValue("green.100", "blue.700")}
+          bg={useColorModeValue("blackAlpha.50", "blue.700")}
           padding="4"
           borderRadius="md"
           shadow="sm"
@@ -113,7 +110,7 @@ function JobTips() {
           />
         </Box>
         <PageSubHeading
-          bg={useColorModeValue("green.100", "blue.700")}
+          bg={useColorModeValue("blackAlpha.50", "blue.700")}
           padding="4"
           borderRadius="md"
           shadow="sm"
@@ -144,7 +141,7 @@ function JobTips() {
           />
         </Box>
         <PageSubHeading
-          bg={useColorModeValue("green.100", "blue.700")}
+          bg={useColorModeValue("blackAlpha.50", "blue.700")}
           padding="4"
           borderRadius="md"
           shadow="sm"
@@ -174,7 +171,7 @@ function JobTips() {
           />
         </Box>
         <PageSubHeading
-          bg={useColorModeValue("green.100", "blue.700")}
+          bg={useColorModeValue("blackAlpha.50", "blue.700")}
           padding="4"
           borderRadius="md"
           shadow="sm"
