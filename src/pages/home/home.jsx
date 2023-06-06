@@ -243,14 +243,18 @@ function Home() {
         </Box>
       </ScrollAnimated>
       <ScrollAnimated>
-        <Box marginTop="16" padding="8">
+        <Box
+          marginTop="16"
+          padding="8"
+          textAlign={{ base: "center", md: "left" }}
+        >
           <PageSubHeading>Financial Decision Making</PageSubHeading>
           <ResponsiveBodyText marginTop="4">
             Financial decision making can be stressful for many, but with the
             right method you can attack any financial problem with confidence
           </ResponsiveBodyText>
           <Box
-            display="flex"
+            display={{ base: "none", sm: "none", lg: "flex" }}
             flexDirection={{ base: "column", sm: "column", lg: "row" }}
             justifyContent="space-between"
           >
