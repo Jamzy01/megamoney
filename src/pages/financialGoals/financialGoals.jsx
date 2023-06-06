@@ -220,60 +220,62 @@ function FinancialGoals() {
         gap="4"
         textAlign="center"
       >
-        <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
-          1. Record your income
-          <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
-            Evaluate how much money you make, and how often, you can estimate
-            this from wages, a pension, benefits, payments and investment
-            payoffs
-          </Text>
-        </Heading>
-        <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
-          2. Record your expenses
-          <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
-            Estimate your expenses each income cycle, from fixed expenses such
-            as bills, debts and costs of living, from debt expenses such as
-            morgtages, credit cards and loans, and from unexpected expenses such
-            as house or car repairs, medical bills and vet bills.
-          </Text>
-        </Heading>
-        <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
-          4. Allocate the money
-          <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
-            Allocate your income to these area of expenses, allocating them in
-            order of neccesity
-            <UnorderedList marginY="2">
-              <ListItem>Fixed Expenses</ListItem>
-              <ListItem>Debt Expenses</ListItem>
-              <ListItem>Unexpected Expenses</ListItem>
-            </UnorderedList>
-            This should give you a fair idea of how much money you spend, and
-            what your allowance should be for other spending
-          </Text>
-        </Heading>
-        <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
-          3. What's left over
-          <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
-            If there is money left over (which there should be), then you can
-            allocate that towards spending money and savings. Spending money
-            should be used for entertainment, shopping, eating out and leisure.
-            Saving money should be used for investments, emergency money,
-            retirement, debt repayments or other savings.
-            <Text fontWeight="bold" as="span">
-              {" "}
-              Be sure to stick to your budget, and make sure you aren't spending
-              past your income
+        <SequencedScrollAnimated>
+          <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
+            1. Record your income
+            <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
+              Evaluate how much money you make, and how often, you can estimate
+              this from wages, a pension, benefits, payments and investment
+              payoffs
             </Text>
-          </Text>
-        </Heading>
-        <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
-          5. Adjust the budget
-          <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
-            If something isn't working out great in your budget, adjust it
-            accordingly. Your budget is never final and is only a guide for your
-            spending.
-          </Text>
-        </Heading>
+          </Heading>
+          <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
+            2. Record your expenses
+            <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
+              Estimate your expenses each income cycle, from fixed expenses such
+              as bills, debts and costs of living, from debt expenses such as
+              morgtages, credit cards and loans, and from unexpected expenses
+              such as house or car repairs, medical bills and vet bills.
+            </Text>
+          </Heading>
+          <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
+            4. Allocate the money
+            <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
+              Allocate your income to these area of expenses, allocating them in
+              order of neccesity
+              <UnorderedList marginY="2">
+                <ListItem>Fixed Expenses</ListItem>
+                <ListItem>Debt Expenses</ListItem>
+                <ListItem>Unexpected Expenses</ListItem>
+              </UnorderedList>
+              This should give you a fair idea of how much money you spend, and
+              what your allowance should be for other spending
+            </Text>
+          </Heading>
+          <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
+            3. What's left over
+            <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
+              If there is money left over (which there should be), then you can
+              allocate that towards spending money and savings. Spending money
+              should be used for entertainment, shopping, eating out and
+              leisure. Saving money should be used for investments, emergency
+              money, retirement, debt repayments or other savings.
+              <Text fontWeight="bold" as="span">
+                {" "}
+                Be sure to stick to your budget, and make sure you aren't
+                spending past your income
+              </Text>
+            </Text>
+          </Heading>
+          <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
+            5. Adjust the budget
+            <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
+              If something isn't working out great in your budget, adjust it
+              accordingly. Your budget is never final and is only a guide for
+              your spending.
+            </Text>
+          </Heading>
+        </SequencedScrollAnimated>
       </Box>
     </PageSetup>
   );

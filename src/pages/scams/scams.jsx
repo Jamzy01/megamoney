@@ -7,19 +7,22 @@ import ResponsiveBodyText from "../../components/text/responsiveBodyText";
 import microsoftLogo from "./assets/email/microsoft_logo.svg";
 import InformationalText from "../../components/text/informationalText";
 import ScrollAnimated from "../../components/scrollAnimated/scrollAnimated";
+import SequencedScrollAnimated from "../../components/scrollAnimated/sequencedScrollAnimated";
 
 function Scams() {
   return (
     <PageSetup>
       <PageHeading>Watch out for scams</PageHeading>
-      <ResponsiveBodyText>
-        Scams are easy to fall for, especially on the web, luckily when you know
-        what to look for, scams can be hilariously obvious
-      </ResponsiveBodyText>
-      <ResponsiveBodyText marginY="8">
-        This email below is an example of a scam, click on the highlighted text
-        to explain why this email is clearly malicious
-      </ResponsiveBodyText>
+      <SequencedScrollAnimated>
+        <ResponsiveBodyText>
+          Scams are easy to fall for, especially on the web, luckily when you
+          know what to look for, scams can be hilariously obvious
+        </ResponsiveBodyText>
+        <ResponsiveBodyText marginY="8">
+          This email below is an example of a scam, click on the highlighted
+          text to explain why this email is clearly malicious
+        </ResponsiveBodyText>
+      </SequencedScrollAnimated>
       <ScrollAnimated>
         <Box
           display="flex"

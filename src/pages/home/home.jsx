@@ -72,7 +72,7 @@ function PageOverviewCard({ title, desc, page }) {
         {desc}
       </ResponsiveBodyText>
       <Link to={page}>
-        <Button variant="ghost">Read more</Button>
+        <Button variant="outline">Read more</Button>
       </Link>
     </Box>
   );
@@ -121,23 +121,28 @@ function Home() {
         right={0}
         top={0}
       />
-      <Box
-        right={0}
-        display="flex"
-        alignItems={{ base: "center", sm: "center", xl: "flex-end" }}
-        flexDirection="column"
-      >
-        <PageHeading textAlign={{ base: "center", sm: "center", xl: "right" }}>
-          Be in the know with money
-        </PageHeading>
-        <PageSubHeading
-          textAlign={{ base: "center", sm: "center", xl: "right" }}
-          fontWeight="400"
-          maxWidth={{ base: null, sm: null, md: "70%", xl: "50%" }}
+      <ScrollAnimated>
+        <Box
+          right={0}
+          display="flex"
+          alignItems={{ base: "center", sm: "center", xl: "flex-end" }}
+          flexDirection="column"
         >
-          Stop yourself from letting money fall out of your pockets unknowingly
-        </PageSubHeading>
-      </Box>
+          <PageHeading
+            textAlign={{ base: "center", sm: "center", xl: "right" }}
+          >
+            Be in the know with money
+          </PageHeading>
+          <PageSubHeading
+            textAlign={{ base: "center", sm: "center", xl: "right" }}
+            fontWeight="400"
+            maxWidth={{ base: null, sm: null, md: "70%", xl: "50%" }}
+          >
+            Stop yourself from letting money fall out of your pockets
+            unknowingly
+          </PageSubHeading>
+        </Box>
+      </ScrollAnimated>
       <ScrollAnimated>
         <GlassCard
           marginTop={{ base: "8", sm: "8", md: "16", xl: "64" }}
@@ -153,7 +158,7 @@ function Home() {
           >
             <PageSubHeading>
               Money skills are essential in a modern day of technology and
-              raising costs of living
+              rising costs of living
             </PageSubHeading>
             <ResponsiveBodyText marginTop="4">
               In a modern age of daily transactions, investment, precarious
@@ -201,7 +206,7 @@ function Home() {
               </ResponsiveBodyText>
             </Box>
             <Link to="/scams">
-              <Button variant="ghost">Read more</Button>
+              <Button variant="outline">Read more</Button>
             </Link>
           </Box>
           <Image
@@ -288,7 +293,7 @@ function Home() {
             />
           </Box>
           <Link to="/decisionmaking">
-            <Button marginTop="4" variant="ghost">
+            <Button marginTop="4" variant="outline">
               Read more
             </Button>
           </Link>
@@ -314,7 +319,7 @@ function Home() {
                 some care you could have a cushy job in only a few years
               </ResponsiveBodyText>
               <Link to="/jobtips">
-                <Button variant="ghost" marginTop="3">
+                <Button variant="outline" marginTop="3">
                   Read more
                 </Button>
               </Link>

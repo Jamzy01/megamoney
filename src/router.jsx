@@ -7,6 +7,7 @@ import WiseConsumers from "./pages/wiseconsumers/wiseConsumers";
 import JobTips from "./pages/jobTips/jobTips";
 import FinancialGoals from "./pages/financialGoals/financialGoals";
 import DecisionMaking from "./pages/decisionMaking/decisionMaking";
+import Credits from "./pages/credits/credits";
 
 const router = createHashRouter([
   {
@@ -20,6 +21,10 @@ const router = createHashRouter([
   {
     path: "/home",
     element: <Home />,
+  },
+  {
+    path: "/credits",
+    element: <Credits />,
   },
   {
     path: "/scams",

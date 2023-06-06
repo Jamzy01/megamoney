@@ -74,7 +74,7 @@ function WiseConsumers() {
             desc="Spending money on impulse is a bad idea as you haven't planned to buy that item, meaning you are likely to deviate from your budget and you also will have done no research on the item being purchased"
           />
           <InformationalCard
-            title="Try to avoid buying for convenience"
+            title="Avoid buying for convenience"
             image={convenienceshopping}
             desc="Whilst being tempting, buying things out of convenince such as takeaway are likely to be much more expensive where better alternatives exist"
           />

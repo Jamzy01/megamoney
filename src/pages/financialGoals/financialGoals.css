@@ -91,7 +91,6 @@
     }
 
     .budget-steps > * p {
-        width: 60%;
         max-width: 30em;
     }
 }

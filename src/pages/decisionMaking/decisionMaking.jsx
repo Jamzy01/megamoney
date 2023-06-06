@@ -101,6 +101,7 @@ function DecisionMakingStepDesc({ title, desc }) {
       padding="6"
       display="flex"
       flexDirection="column"
+      height="100%"
     >
       <Text
         fontWeight="500"

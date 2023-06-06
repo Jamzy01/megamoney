@@ -55,7 +55,7 @@ function SubTip({ title, desc, bgImage }) {
         height="100%"
         objectFit="cover"
         filter={useColorModeValue(
-          "brightness(130%) blur(5px)",
+          "blur(2px)",
           "contrast(75%) brightness(55%) blur(2px)"
         )}
         opacity={useColorModeValue(0.3, 1)}
