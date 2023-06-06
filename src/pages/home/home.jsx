@@ -23,6 +23,7 @@ import moneypot from "./assets/background/moneypot.jpg";
 import computerpadlock from "./assets/topics/scams/computerpadlock.jpg";
 import decisionmaking from "./assets/topics/decisionMaking/decisionMaking.jpg";
 import engineer from "./assets/topics/jobTips/engineer.jpg";
+import moneyfalling from "./assets/topics/desc/moneyfalling.jpg";
 
 import "./home.css";
 import PageSubHeading from "../../components/pageHeading/pageSubHeading";
@@ -148,6 +149,43 @@ function Home() {
           <Box
             display="flex"
             flexDirection="column"
+            alignItems={{ base: "center", sm: "center", md: "flex-start" }}
+          >
+            <PageSubHeading>
+              Money skills are essential in a modern day of technology and
+              raising costs of living
+            </PageSubHeading>
+            <ResponsiveBodyText marginTop="4">
+              In a modern age of daily transactions, investment, precarious
+              finances and technology lead to many people, especially younger
+              people to unneccesarily stress over money issues. Skills such as
+              being a smart consumer, setting proper achievable financial goals,
+              structured decision making, appling to and working jobs with
+              confidence and recognising scams will all help alleviate issues.
+            </ResponsiveBodyText>
+          </Box>
+          <Image
+            aspectRatio={{ base: 16 / 9, sm: 16 / 9, md: 6 / 5 }}
+            flex={1}
+            height="64"
+            borderRadius="md"
+            shadow="md"
+            objectFit="cover"
+            src={moneyfalling}
+          />
+        </GlassCard>
+      </ScrollAnimated>
+      <ScrollAnimated>
+        <Box
+          marginTop={{ base: "8", sm: "8", md: "16", xl: "64" }}
+          padding="8"
+          display="flex"
+          flexDirection={{ base: "column", sm: "column", md: "row" }}
+          gap="8"
+        >
+          <Box
+            display="flex"
+            flexDirection="column"
             justifyContent="space-between"
             alignItems={{ base: "center", sm: "center", md: "flex-start" }}
           >
@@ -175,7 +213,7 @@ function Home() {
             objectFit="cover"
             src={computerpadlock}
           />
-        </GlassCard>
+        </Box>
       </ScrollAnimated>
       <ScrollAnimated>
         <Box marginTop="8" padding="8" width="100%">

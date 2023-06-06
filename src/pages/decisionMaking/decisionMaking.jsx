@@ -12,6 +12,7 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react";
 import ScrollAnimated from "../../components/scrollAnimated/scrollAnimated";
+import SequencedScrollAnimated from "../../components/scrollAnimated/sequencedScrollAnimated";
 
 function DecisionMakingStep({ number, title, below, ...rest }) {
   return (
@@ -203,63 +204,67 @@ function DecisionMaking() {
           xl: "repeat(3, 1fr)",
         }}
       >
-        <DecisionMakingStepDesc
-          title="Identify the problem"
-          desc={
-            <Text>
-              Identifying your problem will help you place it on a level of
-              importance, if it isn't urgent then it will help you realise you
-              have plenty of time and there is no need to worry
-            </Text>
-          }
-        />
-        <DecisionMakingStepDesc
-          title="Brainstorm ideas"
-          desc={
-            <Text>
-              Brainstorm all ideas no matter how ridiculous they may seem, maybe
-              even with a friend, it will help you realise what all of your
-              options are
-            </Text>
-          }
-        />
-        <DecisionMakingStepDesc
-          title="Do your research and consider alternatives"
-          desc={
-            <Text>
-              Do your research, consider alternatives to make an educated guess
-              on the result of all of your options
-            </Text>
-          }
-        />
-        <DecisionMakingStepDesc
-          title="Evaluate pros and cons"
-          desc={
-            <Text>
-              From the information gathered in your research, compile a list of
-              pros and cons to determine what might be the best plan of action
-            </Text>
-          }
-        />
-        <DecisionMakingStepDesc
-          title="Discuss it with an advisor"
-          desc={
-            <Text>
-              After doing your research and evaluating pros and cons, a
-              financial advisor could give you an expert opinion and suggestions
-            </Text>
-          }
-        />
-        <DecisionMakingStepDesc
-          title="Make the decision"
-          desc={
-            <Text>
-              Weigh up your options whilst consider long term effects and your
-              values, if possible try to choose an option that doesn't leave you
-              locked in your decision so you can reconsider at any point
-            </Text>
-          }
-        />
+        <SequencedScrollAnimated>
+          <DecisionMakingStepDesc
+            title="Identify the problem"
+            desc={
+              <Text>
+                Identifying your problem will help you place it on a level of
+                importance, if it isn't urgent then it will help you realise you
+                have plenty of time and there is no need to worry
+              </Text>
+            }
+          />
+          <DecisionMakingStepDesc
+            title="Brainstorm ideas"
+            desc={
+              <Text>
+                Brainstorm all ideas no matter how ridiculous they may seem,
+                maybe even with a friend, it will help you realise what all of
+                your options are
+              </Text>
+            }
+          />
+          <DecisionMakingStepDesc
+            title="Do your research and consider alternatives"
+            desc={
+              <Text>
+                Do your research, consider alternatives to make an educated
+                guess on the result of all of your options
+              </Text>
+            }
+          />
+          <DecisionMakingStepDesc
+            title="Evaluate pros and cons"
+            desc={
+              <Text>
+                From the information gathered in your research, compile a list
+                of pros and cons to determine what might be the best plan of
+                action
+              </Text>
+            }
+          />
+          <DecisionMakingStepDesc
+            title="Discuss it with an advisor"
+            desc={
+              <Text>
+                After doing your research and evaluating pros and cons, a
+                financial advisor could give you an expert opinion and
+                suggestions
+              </Text>
+            }
+          />
+          <DecisionMakingStepDesc
+            title="Make the decision"
+            desc={
+              <Text>
+                Weigh up your options whilst consider long term effects and your
+                values, if possible try to choose an option that doesn't leave
+                you locked in your decision so you can reconsider at any point
+              </Text>
+            }
+          />
+        </SequencedScrollAnimated>
       </Grid>
     </PageSetup>
   );
