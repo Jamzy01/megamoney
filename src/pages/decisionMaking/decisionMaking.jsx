@@ -11,6 +11,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react";
+import ScrollAnimated from "../../components/scrollAnimated/scrollAnimated";
 
 function DecisionMakingStep({ number, title, below, ...rest }) {
   return (
@@ -124,72 +125,74 @@ function DecisionMaking() {
         Making the tough financial decisions is not easy, but with a few simple
         tips you will find the best way to tackle every situation
       </ResponsiveBodyText>
-      <Box
-        marginTop="8"
-        position="relative"
-        display="flex"
-        alignItems="center"
-        paddingX={{ base: 0, sm: 0, xl: "4" }}
-      >
+      <ScrollAnimated>
         <Box
-          display={{ base: "none", sm: "none", xl: "initial" }}
-          position="absolute"
-          top={{ base: 0, sm: 0, xl: "50%" }}
-          right={{ base: 0, sm: 0, xl: "" }}
-          transform={{ base: "", sm: "", xl: "translate(0px, -50%)" }}
-          width={{ base: "4", sm: "4", xl: "100%" }}
-          height={{ base: "8xl", sm: "3xl", xl: "4" }}
-          bg={useColorModeValue("blackAlpha.50", "gray.700")}
-          shadow={useColorModeValue(null, "md")}
-          borderRadius="full"
-        />
-        <Grid
-          width="100%"
-          gap="4"
-          templateColumns={{ base: "", sm: "", xl: "repeat(6, 1fr)" }}
-          templateRows={{ base: "", sm: "", xl: "repeat(2, 1fr)" }}
+          marginTop="8"
+          position="relative"
+          display="flex"
+          alignItems="center"
+          paddingX={{ base: 0, sm: 0, xl: "4" }}
         >
-          <DecisionMakingStep
-            colStart={1}
-            rowStart={1}
-            number="1"
-            title="Identify the problem"
+          <Box
+            display={{ base: "none", sm: "none", xl: "initial" }}
+            position="absolute"
+            top={{ base: 0, sm: 0, xl: "50%" }}
+            right={{ base: 0, sm: 0, xl: "" }}
+            transform={{ base: "", sm: "", xl: "translate(0px, -50%)" }}
+            width={{ base: "4", sm: "4", xl: "100%" }}
+            height={{ base: "8xl", sm: "3xl", xl: "4" }}
+            bg={useColorModeValue("blackAlpha.50", "gray.700")}
+            shadow={useColorModeValue(null, "md")}
+            borderRadius="full"
           />
-          <DecisionMakingStep
-            colStart={2}
-            rowStart={2}
-            number="2"
-            below={true}
-            title="Brainstorm ideas"
-          />
-          <DecisionMakingStep
-            colStart={3}
-            rowStart={1}
-            number="3"
-            title="Do your research"
-          />
-          <DecisionMakingStep
-            colStart={4}
-            rowStart={2}
-            below={true}
-            number="4"
-            title="Evaluate pros and cons"
-          />
-          <DecisionMakingStep
-            colStart={5}
-            rowStart={1}
-            number="5"
-            title="Talk to an advisor"
-          />
-          <DecisionMakingStep
-            colStart={6}
-            rowStart={2}
-            number="6"
-            below={true}
-            title="Make the decision"
-          />
-        </Grid>
-      </Box>
+          <Grid
+            width="100%"
+            gap="4"
+            templateColumns={{ base: "", sm: "", xl: "repeat(6, 1fr)" }}
+            templateRows={{ base: "", sm: "", xl: "repeat(2, 1fr)" }}
+          >
+            <DecisionMakingStep
+              colStart={1}
+              rowStart={1}
+              number="1"
+              title="Identify the problem"
+            />
+            <DecisionMakingStep
+              colStart={2}
+              rowStart={2}
+              number="2"
+              below={true}
+              title="Brainstorm ideas"
+            />
+            <DecisionMakingStep
+              colStart={3}
+              rowStart={1}
+              number="3"
+              title="Do your research"
+            />
+            <DecisionMakingStep
+              colStart={4}
+              rowStart={2}
+              below={true}
+              number="4"
+              title="Evaluate pros and cons"
+            />
+            <DecisionMakingStep
+              colStart={5}
+              rowStart={1}
+              number="5"
+              title="Talk to an advisor"
+            />
+            <DecisionMakingStep
+              colStart={6}
+              rowStart={2}
+              number="6"
+              below={true}
+              title="Make the decision"
+            />
+          </Grid>
+        </Box>
+      </ScrollAnimated>
       <Grid
         marginTop="16"
         gap="8"

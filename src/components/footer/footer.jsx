@@ -1,4 +1,11 @@
-import { Box, Button, Link, Text, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Circle,
+  Link,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import React from "react";
 
 function Footer() {
@@ -8,6 +15,8 @@ function Footer() {
       padding="8"
       display="flex"
       justifyContent="space-between"
+      alignItems="center"
+      fontSize={{ base: "sm", sm: "sm", md: "md" }}
     >
       <Text>
         Website by{" "}
@@ -19,9 +28,7 @@ function Footer() {
           James Gaunt
         </Link>
       </Text>
-      <Box>
-        <Text>Made with React + Chakra UI</Text>
-      </Box>
+      <Text textAlign="right">Made with React + Chakra UI</Text>
     </Box>
   );
 }

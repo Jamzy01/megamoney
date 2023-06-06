@@ -16,6 +16,7 @@ import "./financialGoals.css";
 import { FiList } from "react-icons/fi";
 import PageSubHeading from "../../components/pageHeading/pageSubHeading";
 import ResponsiveBodyText from "../../components/text/responsiveBodyText";
+import ScrollAnimated from "../../components/scrollAnimated/scrollAnimated";
 
 function FinancialGoal({
   title,
@@ -159,46 +160,59 @@ function FinancialGoals() {
         </Box>
         <Box flex={1}>
           <OrderedList className="goal-steps-desc" fontSize="lg">
-            <ListItem id="goal-tip-desc-specific" ref={specificTipDescRef}>
-              Make it specific
-              <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
-                Make your goal specific otherwise it's not a goal, it's only an
-                idea instead set a goal like "only buy takeaway once a week"
-                instead of "save money"
-              </Text>
-            </ListItem>
-            <ListItem id="goal-tip-desc-measurable" ref={measurableTipDescRef}>
-              Make it measurable
-              <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
-                Any goal should be measurable so that you can see the progress
-                you have made, stay motivated to the task and stick to your
-                deadline
-              </Text>
-            </ListItem>
-            <ListItem id="goal-tip-desc-deadline" ref={deadlineTipDescRef}>
-              Make a deadline
-              <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
-                Putting a deadline on your goal will keep you on track and will
-                push you to follow through with your goal insteading of
-                abandoning it
-              </Text>
-            </ListItem>
-            <ListItem id="goal-tip-desc-realistic" ref={realisticTipDescRef}>
-              Check that your goal is realistic
-              <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
-                Make sure that your goal is realistic and achievable, or you
-                will find yourself setting many pointless goals that never see
-                the light of day
-              </Text>
-            </ListItem>
-            <ListItem id="goal-tip-desc-deadline" ref={writeTipDescRef}>
-              Write down the goal
-              <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
-                Write your goal down to help remind you of your task and if
-                possible, tell a friend about your goal which will motivate you
-                and encourage you to not give up
-              </Text>
-            </ListItem>
+            <ScrollAnimated transition={{ delay: 0 }}>
+              <ListItem id="goal-tip-desc-specific" ref={specificTipDescRef}>
+                Make it specific
+                <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
+                  Make your goal specific otherwise it's not a goal, it's only
+                  an idea instead set a goal like "only buy takeaway once a
+                  week" instead of "save money"
+                </Text>
+              </ListItem>
+            </ScrollAnimated>
+            <ScrollAnimated transition={{ delay: 0.02 }}>
+              <ListItem
+                id="goal-tip-desc-measurable"
+                ref={measurableTipDescRef}
+              >
+                Make it measurable
+                <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
+                  Any goal should be measurable so that you can see the progress
+                  you have made, stay motivated to the task and stick to your
+                  deadline
+                </Text>
+              </ListItem>
+            </ScrollAnimated>
+            <ScrollAnimated transition={{ delay: 0.02 }}>
+              <ListItem id="goal-tip-desc-deadline" ref={deadlineTipDescRef}>
+                Make a deadline
+                <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
+                  Putting a deadline on your goal will keep you on track and
+                  will push you to follow through with your goal insteading of
+                  abandoning it
+                </Text>
+              </ListItem>
+            </ScrollAnimated>
+            <ScrollAnimated transition={{ delay: 0.04 }}>
+              <ListItem id="goal-tip-desc-realistic" ref={realisticTipDescRef}>
+                Check that your goal is realistic
+                <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
+                  Make sure that your goal is realistic and achievable, or you
+                  will find yourself setting many pointless goals that never see
+                  the light of day
+                </Text>
+              </ListItem>
+            </ScrollAnimated>
+            <ScrollAnimated transition={{ delay: 0.06 }}>
+              <ListItem id="goal-tip-desc-deadline" ref={writeTipDescRef}>
+                Write down the goal
+                <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
+                  Write your goal down to help remind you of your task and if
+                  possible, tell a friend about your goal which will motivate
+                  you and encourage you to not give up
+                </Text>
+              </ListItem>
+            </ScrollAnimated>
           </OrderedList>
         </Box>
       </Box>
@@ -213,61 +227,70 @@ function FinancialGoals() {
         gap="4"
         textAlign="center"
       >
-        <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
-          1. Record your income
-          <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
-            Evaluate how much money you make, and how often, you can estimate
-            this from wages, a pension, benefits, payments and investment
-            payoffs
-          </Text>
-        </Heading>
-        <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
-          2. Record your expenses
-          <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
-            Estimate your expenses each income cycle, from fixed expenses such
-            as bills, debts and costs of living, from debt expenses such as
-            morgtages, credit cards and loans, and from unexpected expenses such
-            as house or car repairs, medical bills and vet bills.
-          </Text>
-        </Heading>
-        <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
-          4. Allocate the money
-          <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
-            Allocate your income to these area of expenses, allocating them in
-            order of neccesity
-            <UnorderedList marginY="2">
-              <ListItem>Fixed Expenses</ListItem>
-              <ListItem>Debt Expenses</ListItem>
-              <ListItem>Unexpected Expenses</ListItem>
-            </UnorderedList>
-            This should give you a fair idea of how much money you spend, and
-            what your allowance should be for other spending
-          </Text>
-        </Heading>
-        <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
-          3. What's left over
-          <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
-            If there is money left over (which there should be), then you can
-            allocate that towards spending money and savings. Spending money
-            should be used for entertainment, shopping, eating out and leisure.
-            Saving money should be used for investments, emergency money,
-            retirement, debt repayments or other savings.
-            <Text fontWeight="bold" as="span">
-              {" "}
-              Be sure to stick to your budget, and make sure you aren't spending
-              past your income
+        <ScrollAnimated transition={{ delay: 0 }}>
+          <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
+            1. Record your income
+            <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
+              Evaluate how much money you make, and how often, you can estimate
+              this from wages, a pension, benefits, payments and investment
+              payoffs
             </Text>
-          </Text>
-        </Heading>
-
-        <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
-          5. Adjust the budget
-          <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
-            If something isn't working out great in your budget, adjust it
-            accordingly. Your budget is never final and is only a guide for your
-            spending.
-          </Text>
-        </Heading>
+          </Heading>
+        </ScrollAnimated>
+        <ScrollAnimated transition={{ delay: 0.02 }}>
+          <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
+            2. Record your expenses
+            <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
+              Estimate your expenses each income cycle, from fixed expenses such
+              as bills, debts and costs of living, from debt expenses such as
+              morgtages, credit cards and loans, and from unexpected expenses
+              such as house or car repairs, medical bills and vet bills.
+            </Text>
+          </Heading>
+        </ScrollAnimated>
+        <ScrollAnimated transition={{ delay: 0.04 }}>
+          <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
+            4. Allocate the money
+            <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
+              Allocate your income to these area of expenses, allocating them in
+              order of neccesity
+              <UnorderedList marginY="2">
+                <ListItem>Fixed Expenses</ListItem>
+                <ListItem>Debt Expenses</ListItem>
+                <ListItem>Unexpected Expenses</ListItem>
+              </UnorderedList>
+              This should give you a fair idea of how much money you spend, and
+              what your allowance should be for other spending
+            </Text>
+          </Heading>
+        </ScrollAnimated>
+        <ScrollAnimated transition={{ delay: 0.06 }}>
+          <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
+            3. What's left over
+            <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
+              If there is money left over (which there should be), then you can
+              allocate that towards spending money and savings. Spending money
+              should be used for entertainment, shopping, eating out and
+              leisure. Saving money should be used for investments, emergency
+              money, retirement, debt repayments or other savings.
+              <Text fontWeight="bold" as="span">
+                {" "}
+                Be sure to stick to your budget, and make sure you aren't
+                spending past your income
+              </Text>
+            </Text>
+          </Heading>
+        </ScrollAnimated>
+        <ScrollAnimated transition={{ delay: 0.08 }}>
+          <Heading fontSize={{ base: "xl", sm: "2xl", md: "2xl" }}>
+            5. Adjust the budget
+            <Text fontSize={{ base: "sm", sm: "md", md: "md" }}>
+              If something isn't working out great in your budget, adjust it
+              accordingly. Your budget is never final and is only a guide for
+              your spending.
+            </Text>
+          </Heading>
+        </ScrollAnimated>
       </Box>
     </PageSetup>
   );
