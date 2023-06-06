@@ -32,7 +32,7 @@ function DecisionMakingStep({ number, title, below, ...rest }) {
           bottom={0}
           left={0}
           right={0}
-          fontSize="xl"
+          fontSize="lg"
           textAlign="center"
           display="flex"
         >

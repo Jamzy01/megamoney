@@ -32,6 +32,7 @@ import { Link } from "react-router-dom";
 
 import { motion } from "framer-motion";
 import ScrollAnimated from "../../components/scrollAnimated/scrollAnimated";
+import SequencedScrollAnimated from "../../components/scrollAnimated/sequencedScrollAnimated";
 
 function GlassCard({ children, ...rest }) {
   return (
@@ -121,7 +122,7 @@ function Home() {
         right={0}
         top={0}
       />
-      <ScrollAnimated>
+      <SequencedScrollAnimated>
         <Box
           right={0}
           display="flex"
@@ -142,8 +143,6 @@ function Home() {
             unknowingly
           </PageSubHeading>
         </Box>
-      </ScrollAnimated>
-      <ScrollAnimated>
         <GlassCard
           marginTop={{ base: "8", sm: "8", md: "16", xl: "64" }}
           padding="8"
@@ -179,7 +178,7 @@ function Home() {
             src={moneyfalling}
           />
         </GlassCard>
-      </ScrollAnimated>
+      </SequencedScrollAnimated>
       <ScrollAnimated>
         <Box
           marginTop={{ base: "8", sm: "8", md: "16", xl: "64" }}
@@ -254,7 +253,8 @@ function Home() {
             right method you can attack any financial problem with confidence
           </ResponsiveBodyText>
           <Box
-            display={{ base: "none", sm: "none", lg: "flex" }}
+            display={{ base: "none", sm: "none", xl: "flex" }}
+            gap="8"
             flexDirection={{ base: "column", sm: "column", lg: "row" }}
             justifyContent="space-between"
           >
@@ -290,7 +290,6 @@ function Home() {
               src={decisionmaking}
               marginTop="8"
               objectFit="cover"
-              width={{ base: null, sm: null, lg: "40%" }}
               height={{ base: "32", sm: "32", lg: "md" }}
               borderRadius="md"
               shadow="md"
