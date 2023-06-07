@@ -209,9 +209,11 @@ function FinancialGoals() {
           </OrderedList>
         </Box>
       </Box>
-      <PageSubHeading marginTop="4" marginBottom="8">
-        Making a budget
-      </PageSubHeading>
+      <ScrollAnimated>
+        <PageSubHeading marginTop="4" marginBottom="8">
+          Making a budget
+        </PageSubHeading>
+      </ScrollAnimated>
       <Box
         fontSize="3xl"
         className="budget-steps"

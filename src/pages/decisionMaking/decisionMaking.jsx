@@ -123,10 +123,12 @@ function DecisionMaking() {
   return (
     <PageSetup>
       <PageHeading>Financial Decision Making</PageHeading>
-      <ResponsiveBodyText marginTop="8" marginBottom="16">
-        Making the tough financial decisions is not easy, but with a few simple
-        tips you will find the best way to tackle every situation
-      </ResponsiveBodyText>
+      <ScrollAnimated>
+        <ResponsiveBodyText marginTop="8" marginBottom="16">
+          Making the tough financial decisions is not easy, but with a few
+          simple tips you will find the best way to tackle every situation
+        </ResponsiveBodyText>
+      </ScrollAnimated>
       <ScrollAnimated>
         <Box
           marginTop="8"
