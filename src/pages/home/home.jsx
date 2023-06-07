@@ -69,7 +69,10 @@ function PageOverviewCard({ title, desc, page }) {
     >
       <ResponsiveBodyText>{title}</ResponsiveBodyText>
       <Divider width="40%" height="2px" bg="blackAlpha.100" />
-      <ResponsiveBodyText maxWidth="60%" textAlign="center">
+      <ResponsiveBodyText
+        maxWidth={{ base: null, sm: null, md: "40%" }}
+        textAlign="center"
+      >
         {desc}
       </ResponsiveBodyText>
       <Link to={page}>

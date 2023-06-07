@@ -4,7 +4,7 @@ import React from "react";
 function PageHeading({ children, textAlign = "left", ...rest }) {
   return (
     <Heading
-      fontSize={{ base: "2xl", sm: "3xl", md: "5xl" }}
+      fontSize={{ base: "xl", sm: "2xl", md: "3xl", lg: "4xl", xl: "5xl" }}
       textAlign={{ base: "center", md: textAlign }}
       marginBottom="4"
       {...rest}

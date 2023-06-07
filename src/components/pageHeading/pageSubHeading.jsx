@@ -4,7 +4,7 @@ import React from "react";
 function PageSubHeading({ children, textAlign = "left", ...rest }) {
   return (
     <Heading
-      fontSize={{ base: "lg", sm: "xl", md: "3xl" }}
+      fontSize={{ base: "lg", sm: "lg", md: "xl", lg: "2xl" }}
       textAlign={{ base: "center", sm: "center", md: textAlign }}
       {...rest}
     >
